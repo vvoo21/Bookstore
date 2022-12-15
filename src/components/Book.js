@@ -1,9 +1,10 @@
 const Book = (book) => {
-  const { title, author } = book;
+  const { genre, title, author } = book;
 
   return (
     <li>
       <div>
+        <p>{genre}</p>
         <h2>{title}</h2>
         <p>{author}</p>
       </div>
