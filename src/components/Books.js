@@ -1,34 +1,22 @@
-import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 import Book from './Book';
 import Form from './Form';
 
-const books = [
-  {
-    title: 'The Hunger Games',
-    author: 'Suzanne Collins',
-    id: uuidv4(),
-  },
-  {
-    title: 'Dune',
-    author: 'Frank Herbert',
-    id: uuidv4(),
-  },
-  {
-    title: 'Capital in the Twenty-First Century',
-    author: 'Suzanne Collins',
-    id: uuidv4(),
-  },
-];
-
 const Books = () => {
-  const [state] = useState(books);
+  const dispatch = useDispatch();
+  const booksList = useSelector((state) => state.books);
   return (
     <>
       <div className="book-list-container">
         <ul className="book-list">
-          {state.map((book) => (
-            <Book key={book.id} title={book.title} author={book.author} />
+          {booksList.map((book) => (
+            <li key={book.id}>
+              <Book genre={book.genre} title={book.title} author={book.author} />
+              <div>
+                <button type="button" onClick={() => dispatch(removeBook(book.id))}>Remove</button>
+              </div>
+            </li>
           ))}
         </ul>
       </div>
