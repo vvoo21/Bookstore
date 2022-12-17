@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { addBookAsync } from '../redux/books/api';
+import '../styles/form.css';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -35,11 +36,11 @@ const Form = () => {
 
   return (
     <section className="form-container">
-      <h2>ADD NEW BOOK</h2>
-      <form>
-        <input id="title" type="text" name="title" value={newBook.title} onInput={handleInput} placeholder="Book title" aria-label="title" required />
-        <input id="author" type="text" name="author" value={newBook.author} onInput={handleInput} placeholder="Author" aria-label="author" required />
-        <select name="category" id="category" value={newBook.category} onInput={handleInput} placeholder="category" aria-label="category" required>
+      <h2 className="form-title">ADD NEW BOOK</h2>
+      <form className="form">
+        <input className="input" id="title" type="text" name="title" value={newBook.title} onInput={handleInput} placeholder="Book title" aria-label="title" required />
+        <input className="input" id="author" type="text" name="author" value={newBook.author} onInput={handleInput} placeholder="Author" aria-label="author" required />
+        <select className="input" name="category" id="category" value={newBook.category} onInput={handleInput} placeholder="category" aria-label="category" required>
           <option value="" disabled>Category</option>
           <option value="Fantasy">Fantasy</option>
           <option value="Science Fiction">Science Fiction</option>
@@ -55,7 +56,7 @@ const Form = () => {
           <option value="Economy">Economy</option>
           <option value="History">History</option>
         </select>
-        <button type="submit" onClick={handleClick}>ADD BOOK</button>
+        <button className="blue-buttons add-book-button" type="submit" onClick={handleClick}>ADD BOOK</button>
       </form>
     </section>
   );

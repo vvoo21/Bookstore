@@ -4,7 +4,7 @@ import '../styles/nav.css';
 
 const Navigation = () => (
   <nav className="nav-bar">
-    <a href="#/" className="nav-logo">Bookstore CMS</a>
+    <h1 className="nav-logo">Bookstore CMS</h1>
     <ul className="nav-links">
       <li>
         <NavLink

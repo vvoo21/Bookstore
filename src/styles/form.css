@@ -1,0 +1,42 @@
+.form-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 53%);
+} 
+
+.form {
+  display: flex;
+  gap: 32px;
+  margin-top: 20px;
+}
+
+.input {
+  padding: 12px;
+  border: 1px solid hsl(0, 0%, 88%);
+  border-radius: 4px;
+  background-color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  color: hsl(0, 0%, 7%);
+}
+
+#title {
+  width: 30%;
+}
+
+#author {
+  width: 25%;
+}
+
+#category {
+  width: 25%;
+}
+
+.add-book-button {
+  width: 20%;
+  padding: 12px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+
+

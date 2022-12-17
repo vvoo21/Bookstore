@@ -29,20 +29,21 @@ const Books = () => {
                     <div className="book-progress-bar-fill" />
                   </div>
                   <div className="book-progress-percentage">
-                    <p className="percentage">64%</p>
+                    <h3 className="percentage">64%</h3>
                     <p className="completed">Completed</p>
                   </div>
                   <div className="progress-divider" />
                   <div className="current-chapter-container">
                     <p className="current-chapter">CURRENT CHAPTER</p>
                     <p className="current-chapter-number">Chapter 17: &quot;A Lesson Learned&quot;</p>
-                    <button type="button" className="update-progress">UPDATE PROGRESS</button>
+                    <button type="button" className="blue-buttons update-progress">UPDATE PROGRESS</button>
                   </div>
                 </div>
               </li>
             ))}
           </ul>
         </section>
+        <div className="horizontal-divider" />
         <Form />
       </div>
     </>
