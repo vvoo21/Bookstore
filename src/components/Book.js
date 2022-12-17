@@ -1,11 +1,11 @@
 const Book = (book) => {
   const {
-    genre, title, author,
+    category, title, author,
   } = book;
 
   return (
     <div>
-      <p>{genre}</p>
+      <p>{category}</p>
       <h2>{title}</h2>
       <p>{author}</p>
     </div>

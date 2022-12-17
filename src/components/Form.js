@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { addBookAsync } from '../redux/books/api';
 
 const Form = () => {
   const dispatch = useDispatch();
   const [newBook, setNewBook] = useState({
     title: '',
     author: '',
-    genre: '',
+    category: '',
   });
 
   const handleInput = (e) => {
@@ -20,17 +20,16 @@ const Form = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    const book = {
+    dispatch(addBookAsync({
+      item_id: uuidv4(),
       title: newBook.title,
+      category: newBook.category,
       author: newBook.author,
-      genre: newBook.genre,
-      id: uuidv4(),
-    };
-    dispatch(addBook(book));
+    }));
     setNewBook({
       title: '',
       author: '',
-      genre: '',
+      category: '',
     });
   };
 
@@ -40,8 +39,8 @@ const Form = () => {
       <form>
         <input id="title" type="text" name="title" value={newBook.title} onInput={handleInput} placeholder="Book title" />
         <input id="author" type="text" name="author" value={newBook.author} onInput={handleInput} placeholder="Author" />
-        <select name="genre" id="genre" value={newBook.genre} onInput={handleInput} placeholder="Genre">
-          <option value="" disabled>Genre</option>
+        <select name="category" id="category" value={newBook.category} onInput={handleInput} placeholder="category">
+          <option value="" disabled>Category</option>
           <option value="fantasy">Fantasy</option>
           <option value="science fiction">Science Fiction</option>
           <option value="action">Action</option>

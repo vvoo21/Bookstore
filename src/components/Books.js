@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { removeBookAsync } from '../redux/books/api';
 import Book from './Book';
 import Form from './Form';
 
@@ -12,9 +12,9 @@ const Books = () => {
         <ul className="book-list">
           {booksList.map((book) => (
             <li key={book.id}>
-              <Book genre={book.genre} title={book.title} author={book.author} />
+              <Book category={book.category} title={book.title} author={book.author} />
               <div>
-                <button type="button" onClick={() => dispatch(removeBook(book.id))}>Remove</button>
+                <button type="button" onClick={() => dispatch(removeBookAsync(book.id))}>Remove</button>
               </div>
             </li>
           ))}
