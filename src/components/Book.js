@@ -5,9 +5,9 @@ const Book = (book) => {
 
   return (
     <div>
-      <p>{category}</p>
-      <h2>{title}</h2>
-      <p>{author}</p>
+      <p className="book-category">{category}</p>
+      <h2 className="book-title">{title}</h2>
+      <p className="book-author">{author}</p>
     </div>
   );
 };
