@@ -1,10 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import '../styles/nav.css';
 
 const Navigation = () => (
-  <nav>
-    <p className="logo">Bookstore CMS</p>
-    <ul>
+  <nav className="nav-bar">
+    <a href="#/" className="nav-logo">Bookstore CMS</a>
+    <ul className="nav-links">
       <li>
         <NavLink
           to="/"
@@ -23,6 +24,11 @@ const Navigation = () => (
         </NavLink>
       </li>
     </ul>
+    <button className="icon-button" type="button">
+      <span className="material-icons">
+        person
+      </span>
+    </button>
   </nav>
 );
 
