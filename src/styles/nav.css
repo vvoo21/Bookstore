@@ -9,7 +9,7 @@
 .nav-logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #005A9E;
+  color: #005a9e;
 }
 
 .nav-links {
@@ -23,7 +23,7 @@ li a {
   font-size: 1rem;
   color: #121212;
   opacity: 0.5;
-  letter-spacing: 1.9 px;
+  letter-spacing: 1.9px;
   text-transform: uppercase;
 }
 
@@ -33,7 +33,7 @@ li a {
 }
 
 .material-icons {
-  color: #005A9E;
+  color: #005a9e;
 }
 
 .icon-button {
@@ -44,6 +44,3 @@ li a {
   height: 2.5rem;
   cursor: pointer;
 }
-
-
-

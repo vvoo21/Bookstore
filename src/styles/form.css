@@ -2,7 +2,7 @@
   font-size: 1.25rem;
   font-weight: 700;
   color: hsl(0, 0%, 53%);
-} 
+}
 
 .form {
   display: flex;
@@ -37,6 +37,3 @@
   font-weight: 700;
   font-family: "Roboto", sans-serif;
 }
-
-
-
