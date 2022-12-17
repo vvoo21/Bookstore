@@ -56,7 +56,7 @@ const Form = () => {
           <option value="Economy">Economy</option>
           <option value="History">History</option>
         </select>
-        <button className="blue-buttons add-book-button" type="submit" onClick={handleClick}>ADD BOOK</button>
+        <button className="blue-buttons check-add-button" type="submit" onClick={handleClick}>ADD BOOK</button>
       </form>
     </section>
   );
